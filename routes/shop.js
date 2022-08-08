@@ -14,7 +14,7 @@ router.get('/',(req, res, next)=> {
     
     const products = adminData.products;
     //we will send the products variable to the shop.pug {prods: products}
-    res.render('shop', {prods: products, pageTitle: 'Shop', path:'/'});//we don't need to add .pug because we set app.set('view engine','pug'); in the app.js
+    res.render('shop', {prods: products, pageTitle: 'Shop', path:'/', hasProduct: prods.length > 0, activeShop: true, productCSS: true});//we don't need to add .pug because we set app.set('view engine','pug'); in the app.js
     
     
 
